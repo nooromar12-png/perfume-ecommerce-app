@@ -1,0 +1,372 @@
+/* ============================================
+   style.css - L'ESSENCE Perfume Store
+   جميع التنسيقات في ملف واحد
+   ============================================ */
+
+/* ====== الأساسيات ====== */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400;
+}
+
+body {
+    background: #fdf8f8;
+    color: #1c1b1b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/* ====== الألوان الذهبية ====== */
+.text-gold {
+    color: #c9a84c;
+}
+
+.text-gold-light {
+    color: #f5e6a3;
+}
+
+.bg-gold {
+    background: #c9a84c;
+}
+
+.border-gold {
+    border-color: #c9a84c;
+}
+
+/* ====== تدرج ذهبي متحرك ====== */
+.gold-gradient {
+    background: linear-gradient(135deg, #c9a84c 0%, #f5e6a3 50%, #c9a84c 100%);
+    background-size: 200% 200%;
+    animation: shimmer-gold 4s ease-in-out infinite;
+}
+
+@keyframes shimmer-gold {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gold-gradient-text {
+    background: linear-gradient(135deg, #c9a84c 0%, #f5e6a3 40%, #c9a84c 70%, #a8892b 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer-gold 4s ease-in-out infinite;
+}
+
+/* ====== زر ذهبي فاخر ====== */
+.btn-gold {
+    background: linear-gradient(135deg, #c9a84c 0%, #f5e6a3 40%, #c9a84c 80%, #a8892b 100%);
+    background-size: 200% 200%;
+    color: #0a0a0a;
+    padding: 14px 40px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 35px rgba(201, 168, 76, 0.45);
+    background-position: 100% 100%;
+}
+
+.btn-gold-sm {
+    padding: 10px 24px;
+    font-size: 11px;
+}
+
+.btn-gold-block {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+/* ====== زر شفاف ذهبي ====== */
+.btn-outline-gold {
+    background: transparent;
+    color: #c9a84c;
+    padding: 12px 36px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 2px solid #c9a84c;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-outline-gold:hover {
+    background: #c9a84c;
+    color: #0a0a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+}
+
+/* ====== عنوان فخم ====== */
+.heading-luxury {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* ====== خط فاصل ذهبي ====== */
+.divider-gold {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #c9a84c, #f5e6a3, #c9a84c);
+    border-radius: 50px;
+    margin: 16px auto;
+}
+
+/* ====== حقل إدخال فاخر ====== */
+.input-luxury {
+    border: 2px solid #e5e2e1;
+    background: transparent;
+    padding: 14px 18px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    border-radius: 8px;
+    color: #1c1b1b;
+}
+
+.input-luxury:focus {
+    border-color: #c9a84c;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.12);
+}
+
+.input-luxury::placeholder {
+    color: #999;
+}
+
+/* ====== عداد السلة ====== */
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background: #c9a84c;
+    color: #0a0a0a;
+    font-size: 10px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====== روابط التنقل ====== */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #444748;
+    transition: color 0.3s ease;
+    padding-bottom: 4px;
+}
+
+.nav-link:hover {
+    color: #c9a84c;
+}
+
+.nav-link.active {
+    color: #c9a84c;
+    font-weight: 700;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #c9a84c, #f5e6a3);
+    border-radius: 50px;
+}
+
+/* ====== شارة ذهبية ====== */
+.badge-gold {
+    background: linear-gradient(135deg, #c9a84c, #f5e6a3);
+    color: #0a0a0a;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 14px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* ====== رسائل التنبيه ====== */
+.alert-luxury-success {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 16px 20px;
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+}
+
+.alert-luxury-error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 16px 20px;
+    border: 1px solid #fca5a5;
+    border-radius: 12px;
+}
+
+/* ====== الهيرو (الصفحة الرئيسية) ====== */
+.hero-section {
+    background: #fdf8f8;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #0b0c0c;
+}
+
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #685c52;
+    letter-spacing: 0.03em;
+}
+
+/* ====== بطاقات المنتجات ====== */
+.product-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.product-card .product-image {
+    transition: transform 0.8s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.06);
+}
+
+/* ====== قسم المنتجات ====== */
+.products-section {
+    background: #f7f3ee;
+    padding: 80px 0;
+}
+
+/* ====== بطاقة المنتج في صفحة المنتجات ====== */
+.product-card-grid {
+    background: #fdf8f8;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.product-card-grid:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-grid .product-image {
+    transition: transform 0.8s ease;
+}
+
+.product-card-grid:hover .product-image {
+    transform: scale(1.06);
+}
+
+/* ====== فلتر المنتجات ====== */
+.filter-select {
+    border: 2px solid #c4c7c7;
+    background: transparent;
+    padding: 10px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #1c1b1b;
+}
+
+.filter-select:focus {
+    border-color: #c9a84c;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.15);
+}
+
+/* ====== استجابة للشاشات الصغيرة ====== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
